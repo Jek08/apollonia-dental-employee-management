@@ -1,0 +1,19 @@
+@startuml Employee Manager
+left to right direction
+
+actor "HR Staff" as HR
+
+rectangle "Employee Manager" {
+  usecase "Add a new employee \nto their assigned department" as EM1
+  usecase "Remove an employee \nfrom a department" as EM2
+  EM1 --> EM2 : include
+  usecase "View list of employee \nand their department" as EM3
+  usecase "Modify employee information" as EM4
+}
+
+HR --> EM1
+HR --> EM2
+HR --> EM3
+HR --> EM4
+
+@enduml
